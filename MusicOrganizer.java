@@ -82,4 +82,15 @@ public class MusicOrganizer
     {
         player.stop();
     }
+    
+    public void listMachin(String searchString)
+    {
+        for (String filename : files)
+        {
+           if (filename.contains(searchString))
+            {
+                System.out.println(filename);
+            }
+        }
+    }
 }
