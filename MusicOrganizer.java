@@ -82,7 +82,9 @@ public class MusicOrganizer
     {
         player.stop();
     }
-
+    /**
+     * Permite hacer busqueda de un archivo de la colección
+     */
     public void listMachin(String searchString)
     {
         boolean exist = false;
@@ -98,6 +100,20 @@ public class MusicOrganizer
         if (exist == false)
         {
             System.out.println("No se encuentra un archivo con ese nombre");
+        }
+    }
+    
+    /**
+     * Permite reproducir unos segundos de todos los archivos de un determinado artista
+     */
+    public void playPartSing(String nameArtist)
+    {
+        for (String filename : files)
+        {
+            if (filename.contains(nameArtist))
+            {
+                player.playSample(filename);
+            }
         }
     }
 
