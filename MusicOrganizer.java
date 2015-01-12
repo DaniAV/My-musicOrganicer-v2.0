@@ -82,6 +82,7 @@ public class MusicOrganizer
     {
         player.stop();
     }
+    
     /**
      * Permite hacer busqueda de un archivo de la colección
      */
@@ -116,6 +117,33 @@ public class MusicOrganizer
             }
         }
     }
-
+    
+    public int findFirst (String Search)
+    {
+        int index = 0;
+        boolean found = false;
+        
+        while (!found = true && index < files.size())
+        {
+            String filename = files.get(index);
+            if (filename.contains(Search))
+            {
+              found = false;  
+            }
+            else
+            {
+                index ++;
+            }
+        }
+        
+        if (found = false)
+        {
+            return index;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }
 
